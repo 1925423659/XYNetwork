@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9El-TZ-rSN">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--普通请求-->
+        <scene sceneID="ubA-Rd-T8R">
+            <objects>
+                <viewController id="1Ul-JF-iqC" customClass="BViewController" customModule="XYNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B9b-pD-kVd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a22-k2-v8s">
+                                <rect key="frame" x="142" y="431" width="47" height="34"/>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonClick" destination="1Ul-JF-iqC" eventType="touchUpInside" id="1eI-3K-c2b"/>
+                                    <action selector="postButtonClick" destination="FMl-Q8-1mo" eventType="touchUpInside" id="RSH-Qb-7ez"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkA-hT-ser">
+                                <rect key="frame" x="231" y="431" width="35" height="34"/>
+                                <state key="normal" title="GET">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getButtonClick" destination="1Ul-JF-iqC" eventType="touchUpInside" id="MTS-fp-riZ"/>
+                                    <action selector="getButtonClick" destination="FMl-Q8-1mo" eventType="touchUpInside" id="oRq-OG-FnH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mkA-hT-ser" firstAttribute="centerX" secondItem="B9b-pD-kVd" secondAttribute="centerX" multiplier="1.2" id="30J-rS-AU6"/>
+                            <constraint firstItem="mkA-hT-ser" firstAttribute="centerY" secondItem="B9b-pD-kVd" secondAttribute="centerY" id="WOr-qd-Cs2"/>
+                            <constraint firstItem="a22-k2-v8s" firstAttribute="centerX" secondItem="B9b-pD-kVd" secondAttribute="centerX" multiplier="0.8" id="sBs-Bu-vez"/>
+                            <constraint firstItem="a22-k2-v8s" firstAttribute="centerY" secondItem="B9b-pD-kVd" secondAttribute="centerY" id="scy-JY-9h3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="普通请求" id="fiX-zX-HZx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDx-qf-AHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="134"/>
+        </scene>
+        <!--链式请求-->
+        <scene sceneID="Edq-nO-64T">
+            <objects>
+                <viewController id="FMl-Q8-1mo" customClass="AViewController" customModule="XYNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PFM-A4-h44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvG-yy-zkt">
+                                <rect key="frame" x="142" y="431" width="47" height="34"/>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonClick" destination="FMl-Q8-1mo" eventType="touchUpInside" id="iJe-dw-Ax5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq4-wd-5LX">
+                                <rect key="frame" x="231" y="431" width="35" height="34"/>
+                                <state key="normal" title="GET">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getButtonClick" destination="FMl-Q8-1mo" eventType="touchUpInside" id="zPV-zg-RzQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hvG-yy-zkt" firstAttribute="centerY" secondItem="PFM-A4-h44" secondAttribute="centerY" id="YZa-2s-hfw"/>
+                            <constraint firstItem="Aq4-wd-5LX" firstAttribute="centerX" secondItem="PFM-A4-h44" secondAttribute="centerX" multiplier="1.2" id="k4S-kO-0ui"/>
+                            <constraint firstItem="hvG-yy-zkt" firstAttribute="centerX" secondItem="PFM-A4-h44" secondAttribute="centerX" multiplier="0.8" id="nD9-Gk-uf0"/>
+                            <constraint firstItem="Aq4-wd-5LX" firstAttribute="centerY" secondItem="PFM-A4-h44" secondAttribute="centerY" id="vtx-QM-hJU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="链式请求" id="QJE-md-vzQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XfT-9D-skE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="-514"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wve-gJ-nYL">
+            <objects>
+                <tabBarController id="9El-TZ-rSN" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kkW-yZ-K9F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FMl-Q8-1mo" kind="relationship" relationship="viewControllers" id="vl3-T1-3Qp"/>
+                        <segue destination="1Ul-JF-iqC" kind="relationship" relationship="viewControllers" id="PP8-0e-AKu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3M-pg-Jz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="-190"/>
+        </scene>
+    </scenes>
+</document>
